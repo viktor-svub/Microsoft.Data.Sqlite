@@ -22,6 +22,7 @@ namespace Microsoft.Data.Sqlite
         private object _value;
         private int? _size;
         private SqliteType? _sqliteType;
+        private DataRowVersion? _sourceVersion;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="SqliteParameter" /> class.
@@ -190,6 +191,13 @@ namespace Microsoft.Data.Sqlite
         {
             get => _value;
             set { _value = value; }
+        }
+        
+        /// <inheritdoc />
+        public override DataRowVersion SourceVersion
+        {
+            get => _sourceVersion ?? DataRowVersion.Default;
+            set => _sourceVersion = value;
         }
 
         /// <summary>

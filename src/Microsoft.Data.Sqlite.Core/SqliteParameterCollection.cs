@@ -38,6 +38,15 @@ namespace Microsoft.Data.Sqlite
         /// <value>The object used to synchronize access to the collection.</value>
         public override object SyncRoot
             => ((ICollection)_parameters).SyncRoot;
+        
+        /// <inheritdoc />
+        public override bool IsFixedSize => false;
+
+        /// <inheritdoc />
+        public override bool IsReadOnly => false;
+
+        /// <inheritdoc />
+        public override bool IsSynchronized => false;
 
         /// <summary>
         ///     Gets or sets the parameter at the specified index.

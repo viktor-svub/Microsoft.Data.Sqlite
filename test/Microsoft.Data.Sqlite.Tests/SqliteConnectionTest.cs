@@ -134,7 +134,7 @@ namespace Microsoft.Data.Sqlite
             {
                 connection.Open();
 
-                Assert.Equal(Path.Combine(AppContext.BaseDirectory, "local.db"), connection.DataSource);
+                Assert.Equal(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "local.db"), connection.DataSource);
             }
         }
 

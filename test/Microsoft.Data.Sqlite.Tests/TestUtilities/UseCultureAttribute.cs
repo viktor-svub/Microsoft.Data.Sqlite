@@ -4,6 +4,7 @@
 using System;
 using System.Globalization;
 using System.Reflection;
+using System.Threading;
 using Xunit.Sdk;
 
 namespace Microsoft.Data.Sqlite.TestUtilities
@@ -33,14 +34,14 @@ namespace Microsoft.Data.Sqlite.TestUtilities
         {
             _originalCulture = CultureInfo.CurrentCulture;
             _originalUICulture = CultureInfo.CurrentUICulture;
-            CultureInfo.CurrentCulture = Culture;
-            CultureInfo.CurrentUICulture = UICulture;
+            Thread.CurrentThread.CurrentCulture = Culture;
+            Thread.CurrentThread.CurrentUICulture = UICulture;
         }
 
         public override void After(MethodInfo methodUnderTest)
         {
-            CultureInfo.CurrentCulture = _originalCulture;
-            CultureInfo.CurrentUICulture = _originalUICulture;
+            Thread.CurrentThread.CurrentCulture = _originalCulture;
+            Thread.CurrentThread.CurrentUICulture = _originalUICulture;
         }
     }
 }

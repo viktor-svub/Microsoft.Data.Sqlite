@@ -3,7 +3,7 @@
   <PropertyGroup>
     <LangVersion>7.1</LangVersion>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net45</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

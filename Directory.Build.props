@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="Internal.AspNetCore.Sdk" PrivateAssets="All" Version="$(InternalAspNetCoreSdkPackageVersion)" />
+    <PackageReference Include="Newtonsoft.Json" PrivateAssets="All" Version="9.0.1" />
   </ItemGroup>
 
 </Project>

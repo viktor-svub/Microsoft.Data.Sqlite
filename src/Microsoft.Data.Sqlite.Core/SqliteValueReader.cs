@@ -264,7 +264,9 @@ namespace Microsoft.Data.Sqlite
         protected byte[] GetBlob(int ordinal)
             => IsDBNull(ordinal)
                 ? GetNull<byte[]>(ordinal)
-                : GetBlobCore(ordinal) ?? Array.Empty<byte>();
+                : GetBlobCore(ordinal) ?? EmptyArray;
+        
+        private static readonly byte[] EmptyArray = new byte[0];
 
         protected abstract byte[] GetBlobCore(int ordinal);
 
