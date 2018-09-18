@@ -3,8 +3,11 @@
   <PropertyGroup>
     <AssemblyName>Microsoft.Data.Sqlite</AssemblyName>
     <RootNamespace>$(AssemblyName)</RootNamespace>
-    <PackageId>Microsoft.Data.Sqlite.Core</PackageId>
+    <PackageId>Microsoft.Data.Sqlite.Net45</PackageId>
     <Description>SQLite implementation of the System.Data.Common provider model.
+
+Microsoft.Data.Sqlite 2.1 backport to .NET Framework 4.5 with minimal changes,
+see [https://github.com/viktor-svub/Microsoft.Data.Sqlite.Net45/tree/net45-2.1]
 
 Commonly Used Types:
 Microsoft.Data.Sqlite.SqliteCommand
