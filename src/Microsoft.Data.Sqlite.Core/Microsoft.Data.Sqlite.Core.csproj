@@ -39,7 +39,7 @@ Microsoft.Data.Sqlite.SqliteTransaction</Description>
   <ItemGroup>
     <PackageReference Include="SQLitePCLRaw.core" Version="$(SQLitePCLRawCorePackageVersion)" />
     <PackageReference Include="StyleCop.Analyzers" Version="$(StyleCopAnalyzersPackageVersion)" PrivateAssets="All" />
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="System.ValueTuple" Version="$(SystemValueTuplePackageVersion)" />
   </ItemGroup>
 
   <ItemGroup>
